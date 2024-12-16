@@ -15,7 +15,7 @@ add_library(can2040::can2040 ALIAS can2040)
 target_sources(can2040 INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/src/can2040.h
                                  ${CMAKE_CURRENT_SOURCE_DIR}/src/can2040.c)
 
-target_link_libraries(can2040 INTERFACE pico_stdlib hardware_pio)
+target_link_libraries(can2040 INTERFACE pico_stdlib hardware_pio cmsis_core)
 
 pico_generate_pio_header(can2040 ${CMAKE_CURRENT_LIST_DIR}/pio/can2040.pio)
 
